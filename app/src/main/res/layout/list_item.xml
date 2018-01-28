@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/card_vertical_margin"
+    android:layout_marginLeft="@dimen/card_horizontal_margin"
+    android:layout_marginRight="@dimen/card_horizontal_margin"
+    android:layout_marginTop="@dimen/card_vertical_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/card_corner_radius"
+    card_view:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="@dimen/book_image_width"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/book_image_description"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/book_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/subtitle_text_bottom_padding"
+                android:paddingLeft="@dimen/subtitle_text_horizontal_padding"
+                android:paddingRight="@dimen/subtitle_text_horizontal_padding"
+                android:paddingTop="@dimen/subtitle_text_top_padding"
+                android:textSize="@dimen/subtitle_text_size" />
+
+            <TextView
+                android:id="@+id/book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_subtitle"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/title_text_bottom_padding"
+                android:paddingLeft="@dimen/title_text_horizontal_padding"
+                android:paddingRight="@dimen/title_text_horizontal_padding"
+                android:paddingTop="@dimen/title_text_top_padding"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_title"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/author_text_horizontal_padding"
+                android:paddingRight="@dimen/author_text_horizontal_padding"
+                android:paddingTop="@dimen/author_text_vertical_padding"
+                android:textSize="@dimen/author_text_size" />
+
+            <TextView
+                android:id="@+id/book_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_title"
+                android:ellipsize="end"
+                android:maxLines="7"
+                android:paddingLeft="@dimen/summary_text_horizontal_padding"
+                android:paddingRight="@dimen/summary_text_horizontal_padding"
+                android:paddingTop="@dimen/summary_text_vertical_padding"
+                android:textSize="@dimen/summary_text_size" />
+
+            <TextView
+                android:id="@+id/book_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="@dimen/link_text_vertical_padding"
+                android:paddingLeft="@dimen/link_text_horizontal_padding"
+                android:paddingRight="@dimen/link_text_horizontal_padding"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="@dimen/link_text_size" />
+
+            <TextView
+                android:id="@+id/book_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/rate_text_vertical_padding"
+                android:paddingLeft="@dimen/rate_text_horizontal_padding"
+                android:paddingRight="@dimen/rate_text_horizontal_padding"
+                android:textSize="@dimen/rate_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

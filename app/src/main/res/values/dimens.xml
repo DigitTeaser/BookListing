@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding of RecyclerView -->
+    <dimen name="recycler_view_bottom_padding">8dp</dimen>
+
+    <!-- Padding of compound image of TextView -->
+    <dimen name="compound_image_padding">16dp</dimen>
+    <!-- Padding of empty view. -->
+    <dimen name="empty_view_padding">16dp</dimen>
+
+    <!-- Padding of the result TextView -->
+    <dimen name="result_view_vertical_padding">8dp</dimen>
+    <dimen name="result_view_horizontal_padding">16dp</dimen>
+    <!-- Text size of the resultTextView -->
+    <dimen name="result_text_size">14sp</dimen>
+
+    <!-- Padding of the result count TextView -->
+    <dimen name="list_bottom_view_vertical_padding">8dp</dimen>
+    <dimen name="list_bottom_view_horizontal_padding">16dp</dimen>
+    <!-- Text size of the result count TextView -->
+    <dimen name="list_bottom_text_size">14sp</dimen>
+
+    <!-- Margin of CardView -->
+    <dimen name="card_vertical_margin">4dp</dimen>
+    <dimen name="card_horizontal_margin">8dp</dimen>
+    <dimen name="card_expanded_vertical_margin">2dp</dimen>
+    <dimen name="card_expanded_horizontal_margin">4dp</dimen>
+    <!-- Style of CardView -->
+    <dimen name="card_height">152dp</dimen>
+    <dimen name="card_expanded_height">228dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+    <!-- Image size in CardView -->
+    <dimen name="book_image_height">152dp</dimen>
+    <dimen name="book_image_width">114dp</dimen>
+    <dimen name="book_image_expanded_width">171dp</dimen>
+    <!-- Padding of TextView in CardView -->
+    <dimen name="subtitle_text_horizontal_padding">8dp</dimen>
+    <dimen name="subtitle_text_top_padding">8dp</dimen>
+    <dimen name="subtitle_text_bottom_padding">8dp</dimen>
+    <dimen name="title_text_horizontal_padding">24dp</dimen>
+    <dimen name="title_text_top_padding">8dp</dimen>
+    <dimen name="title_text_bottom_padding">4dp</dimen>
+    <dimen name="summary_text_horizontal_padding">16dp</dimen>
+    <dimen name="summary_text_vertical_padding">4dp</dimen>
+    <dimen name="author_text_horizontal_padding">24dp</dimen>
+    <dimen name="author_text_vertical_padding">4dp</dimen>
+    <dimen name="link_text_horizontal_padding">16dp</dimen>
+    <dimen name="link_text_vertical_padding">8dp</dimen>
+    <dimen name="rate_text_horizontal_padding">16dp</dimen>
+    <dimen name="rate_text_vertical_padding">8dp</dimen>
+    <!-- Text size in CardView -->
+    <dimen name="subtitle_text_size">16sp</dimen>
+    <dimen name="title_text_size">24sp</dimen>
+    <dimen name="summary_text_size">16sp</dimen>
+    <dimen name="author_text_size">16sp</dimen>
+    <dimen name="link_text_size">16sp</dimen>
+    <dimen name="rate_text_size">15sp</dimen>
+</resources>

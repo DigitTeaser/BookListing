@@ -1,0 +1,32 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Book Listing</string>
+
+    <!-- Search string. [CHAR LIMIT=NONE] -->
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search books.</string>
+    <string name="search_text">Touch here to begin search books.</string>
+
+    <!-- Image description. [CHAR LIMIT=NONE] -->
+    <string name="book_image_description">This is an image about the book.</string>
+
+    <!-- Rating string. [CHAR LIMIT=NONE] -->
+    <string name="no_rating">No rate.</string>
+    <string name="rating_string">Rate: <xliff:g example="8.5" id="rate">%3.1f</xliff:g>/<xliff:g example="10" id="maxRating">%2d</xliff:g></string>
+
+    <!-- Result string. [CHAR LIMIT=NONE] -->
+    <string name="result_count_one">Found one book.</string>
+    <string name="result_count_string">Found <xliff:g example="156" id="resultCount">%d</xliff:g> books.</string>
+    <string name="result_page_string">Page <xliff:g example="2" id="currentPage">%d</xliff:g>/<xliff:g example="10" id="totalPage">%d</xliff:g></string>
+
+    <!-- Link text string. [CHAR LIMIT=NONE] -->
+    <string name="learn_more">Learn more.</string>
+
+    <!-- List bottom string. [CHAR LIMIT=NONE] -->
+    <string name="list_bottom_left">Swipe right to open last page.</string>
+    <string name="list_bottom_right">Swipe left to open next page.</string>
+
+    <!-- Text to display in the list when there are no result. [CHAR LIMIT=NONE] -->
+    <string name="no_book">No book found.\nPlease search for other keywords.</string>
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">No internet connection.</string>
+</resources>

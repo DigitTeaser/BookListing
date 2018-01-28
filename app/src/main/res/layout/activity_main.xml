@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/result_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingBottom="@dimen/result_view_vertical_padding"
+                        android:paddingLeft="@dimen/result_view_horizontal_padding"
+                        android:paddingRight="@dimen/result_view_horizontal_padding"
+                        android:paddingTop="@dimen/result_view_vertical_padding"
+                        android:textSize="@dimen/result_text_size"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/result_page"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end|center_vertical"
+                        android:paddingBottom="@dimen/result_view_vertical_padding"
+                        android:paddingLeft="@dimen/result_view_horizontal_padding"
+                        android:paddingRight="@dimen/result_view_horizontal_padding"
+                        android:paddingTop="@dimen/result_view_vertical_padding"
+                        android:textSize="@dimen/result_text_size"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/recycler_view_bottom_padding" />
+
+                <LinearLayout
+                    android:id="@+id/list_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/list_bottom_left"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingBottom="@dimen/list_bottom_view_vertical_padding"
+                        android:paddingLeft="@dimen/list_bottom_view_horizontal_padding"
+                        android:paddingRight="@dimen/list_bottom_view_horizontal_padding"
+                        android:textSize="@dimen/list_bottom_text_size" />
+
+                    <TextView
+                        android:id="@+id/list_bottom_right"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end|center_vertical"
+                        android:paddingBottom="@dimen/list_bottom_view_vertical_padding"
+                        android:paddingLeft="@dimen/list_bottom_view_horizontal_padding"
+                        android:paddingRight="@dimen/list_bottom_view_horizontal_padding"
+                        android:textSize="@dimen/list_bottom_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <!-- Empty view is only visible when the list has no items. -->
+        <TextView
+            android:id="@+id/empty_view"
+            style="@style/EmptyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/empty_view_padding" />
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

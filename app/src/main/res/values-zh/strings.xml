@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">图书列表</string>
+    <string name="book_image_description">这是一本书的图片。</string>
+    <string name="no_rating">无评分</string>
+    <string name="rating_string">评分：<xliff:g example="8.5" id="rate">%3.1f</xliff:g>/<xliff:g example="10" id="maxRating">%2d</xliff:g></string>
+    <string name="result_count_one">找到一本书</string>
+    <string name="result_count_string">找到 <xliff:g example="156" id="resultCount">%d</xliff:g> 本书</string>
+    <string name="result_page_string"><xliff:g example="2" id="currentPage">%d</xliff:g>/<xliff:g example="10" id="totalPage">%d</xliff:g> 页</string>
+    <string name="learn_more">了解更多</string>
+    <string name="list_bottom_left">右滑打开上一页</string>
+    <string name="list_bottom_right">左滑打开下一页</string>
+    <string name="no_internet_connection">无网络连接</string>
+    <string name="no_book">未找到相关图书\n请搜索其它关键词</string>
+    <string name="search_hint">搜索图书</string>
+    <string name="search_title">搜索</string>
+    <string name="search_text">点击此处开始搜索</string>
+</resources>
