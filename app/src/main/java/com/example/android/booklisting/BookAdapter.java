@@ -84,7 +84,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
     }
 
     /**
-     * List that saves the status of whether CardView is expanded of not.
+     * List that saves the status of whether CardView is expanded or not.
      */
     private List<Boolean> isCardExpanded = new ArrayList<>();
 
@@ -97,7 +97,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
     @Override
     public int getItemCount() {
         int listItemCount = mBooksList.size();
-        // Make sure that the CardView indicator list size will not larger than the book list one.
+        // Make sure that the CardView indicator list size will not larger than the book list itself.
         if (isCardExpanded.size() < listItemCount) {
             // Clear the list before add more item to it.
             isCardExpanded.clear();
@@ -126,25 +126,12 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
         // Get the data model based on position.
         final Book book = mBooksList.get(position);
 
-        // Get the origin vertical and horizontal margin of CardView.
-        int originVerticalMargin = mContext.getResources().
-                getDimensionPixelOffset(R.dimen.card_vertical_margin);
-        int originHorizontalMargin = mContext.getResources().
-                getDimensionPixelOffset(R.dimen.card_horizontal_margin);
-        // Use the helper method to set CardView Margins.
-        setMargins(holder.cardView, originHorizontalMargin, originVerticalMargin,
-                originHorizontalMargin, originVerticalMargin);
-
         // Set the subtitle of the book to the TextView.
         holder.bookSubtitleView.setText(book.getSubtitle());
         // Set the title of the book to the TextView.
         holder.bookTitleView.setText(book.getTitle());
         // Set the author of the book to the TextView.
         holder.bookAuthorView.setText(book.getAuthor());
-        // Set the summary of the book to gone by default.
-        holder.bookSummaryView.setVisibility(View.GONE);
-        // Set the link of the book to gone by default.
-        holder.bookLinkView.setVisibility(View.GONE);
 
         // If the rate for the book is zero, which means there is no rating for the book.
         // Otherwise, set the rate for the book to the TextView.
@@ -230,8 +217,20 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
                 // Restore the origin layout.
                 holder.bookSubtitleView.setVisibility(View.VISIBLE);
                 holder.bookAuthorView.setVisibility(View.VISIBLE);
+                // Set the summary of the book to gone by default.
+                holder.bookSummaryView.setVisibility(View.GONE);
+                // Set the link of the book to gone by default.
+                holder.bookLinkView.setVisibility(View.GONE);
                 cardViewLayoutParams.height = (int) mContext.getResources().
                         getDimension(R.dimen.card_height);
+                // Use the helper method to set CardView Margins.
+                // Get the origin vertical and horizontal margin of CardView.
+                int originVerticalMargin = mContext.getResources().
+                        getDimensionPixelOffset(R.dimen.card_vertical_margin);
+                int originHorizontalMargin = mContext.getResources().
+                        getDimensionPixelOffset(R.dimen.card_horizontal_margin);
+                setMargins(holder.cardView, originHorizontalMargin, originVerticalMargin,
+                        originHorizontalMargin, originVerticalMargin);
                 imageLayoutParams.width = (int) mContext.getResources().
                         getDimension(R.dimen.book_image_width);
 

@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
             // Restore the saved variables.
             resultOffset = savedInstanceState.getInt("resultOffset");
             requestKeywords = savedInstanceState.getString("requestKeywords");
+            // When request keywords is not null, restore the list.
             if (requestKeywords != null) {
                 // Get a reference to the LoaderManager, in order to interact with loaders.
                 loaderManager = getLoaderManager();
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                // Only when there is internet connection and empty list, fresh the data.
+                // Only when there is internet connection and not empty list, fresh the data.
                 if (!isConnected() || mAdapter.getItemCount() == 0) {
                     // Call setRefreshing(false) to signal refresh has finished.
                     swipeContainer.setRefreshing(false);
@@ -181,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                     // Set refreshing to true because it begin to fetch new data.
                     swipeContainer.setRefreshing(true);
                     // Set the background as the touch feedback.
-                    bottomLeftView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    bottomLeftView.setBackgroundResource(R.drawable.gradient_blue_right);
                     // Fetch data until the list reach the start.
                     resultOffset -= NUMBER_PER_REQUEST;
                     loaderManager.restartLoader(BOOK_LOADER_ID, null, new BookLoaderCallback());
@@ -199,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                     // Set refreshing to true because it begin to fetch new data.
                     swipeContainer.setRefreshing(true);
                     // Set the background as the touch feedback.
-                    bottomRightView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    bottomRightView.setBackgroundResource(R.drawable.gradient_blue_left);
                     // Fetch data until the list reach the end.
                     resultOffset += NUMBER_PER_REQUEST;
                     loaderManager.restartLoader(BOOK_LOADER_ID, null, new BookLoaderCallback());
