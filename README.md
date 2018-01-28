@@ -15,7 +15,9 @@ Users can touch the empty state `TextView` to open `SearchView` in AppBar and en
 
 <img src="swipe_feedback.jpg" width="300px">
 
-When there are more than ten books result, users can navigate through pages by swiping left or right at the bottom of the list. There is some kind of swipe feedback to both left and right gestures. And of course, when the app is at the first page, it will not tell users to swipe right to go back to the previous page; and when the app is at the last page, it will also not tell users to swipe left to the next page.
+1. When there are more than ten books result, users can navigate through pages by swiping left or right at the bottom of the list. There is some kind of swipe feedback to both left and right gestures.
+2. And of course, when the app is at the first page, it will not tell users to swipe right to go back to the previous page; and when the app is at the last page, it will also not tell users to swipe left to the next page.
+3. When pages change, the list will jump back to the top by setting `NestedScrollView` position to 0.
 
 <img src="device_rotation.gif" width="300px">
 
