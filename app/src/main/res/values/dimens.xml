@@ -11,14 +11,8 @@
     <!-- Padding of the result TextView -->
     <dimen name="result_view_vertical_padding">8dp</dimen>
     <dimen name="result_view_horizontal_padding">16dp</dimen>
-    <!-- Text size of the resultTextView -->
+    <!-- Text size of the result TextView -->
     <dimen name="result_text_size">14sp</dimen>
-
-    <!-- Padding of the result count TextView -->
-    <dimen name="list_bottom_view_vertical_padding">8dp</dimen>
-    <dimen name="list_bottom_view_horizontal_padding">16dp</dimen>
-    <!-- Text size of the result count TextView -->
-    <dimen name="list_bottom_text_size">14sp</dimen>
 
     <!-- Margin of CardView -->
     <dimen name="card_vertical_margin">4dp</dimen>

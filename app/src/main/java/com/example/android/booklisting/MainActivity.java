@@ -15,12 +15,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -149,7 +151,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 // Only when there is internet connection and not empty list, fresh the data.
-                if (!isConnected() || mAdapter.getItemCount() == 0) {
+                if (!isConnected()) {
+                    // Call setRefreshing(false) to signal refresh has finished.
+                    swipeContainer.setRefreshing(false);
+                    // Make a toast to inform users that the device is disconnected.
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            getString(R.string.no_internet_connection), Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                } else if (mAdapter.getItemCount() == 0) {
                     // Call setRefreshing(false) to signal refresh has finished.
                     swipeContainer.setRefreshing(false);
                 } else {
@@ -398,6 +408,13 @@ public class MainActivity extends AppCompatActivity {
                     loaderManager.restartLoader(BOOK_LOADER_ID, null, new BookLoaderCallback());
                 } else if (mAdapter.getItemCount() == 0) {
                     setEmptyStateView(R.string.no_internet_connection, R.drawable.no_connection);
+                } else {
+                    // To maintain contents that users already get, only make a toast to
+                    // notice users that the device is disconnected.
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            getString(R.string.no_internet_connection), Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
                 }
                 return false;
             }

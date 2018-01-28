@@ -167,7 +167,7 @@ public class QueryUtils {
             // Create a JSONObject from the JSON response string.
             JSONObject baseJsonResponse = new JSONObject(bookJSON);
 
-            /**
+            /*
              * Get the result count from the key called "total".
              */
             resultCount = baseJsonResponse.getInt("total");
@@ -207,7 +207,7 @@ public class QueryUtils {
                 String summary = currentBook.getString("summary");
 
                 // For a given book, extract the String associated with the
-                // key called "summary", which represents the summary of book.
+                // key called "alt", which represents the link of book.
                 String link = currentBook.getString("alt");
 
                 // For a given book, extract the object associated with the
@@ -222,7 +222,7 @@ public class QueryUtils {
                 // which represents get the max value of the rating.
                 int maxRating = rating.getInt("max");
 
-                /**
+                /*
                  *  For a given book, extract the Object for the key called "images",
                  *  which represents a set of images of the book.
                  *  Then extract the value for the key called "large",

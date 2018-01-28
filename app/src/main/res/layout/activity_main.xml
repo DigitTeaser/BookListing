@@ -26,29 +26,13 @@
 
                     <TextView
                         android:id="@+id/result_count"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="start|center_vertical"
-                        android:paddingBottom="@dimen/result_view_vertical_padding"
-                        android:paddingLeft="@dimen/result_view_horizontal_padding"
-                        android:paddingRight="@dimen/result_view_horizontal_padding"
-                        android:paddingTop="@dimen/result_view_vertical_padding"
-                        android:textSize="@dimen/result_text_size"
-                        android:textStyle="italic" />
+                        style="@style/resultTextView"
+                        android:gravity="start|center_vertical" />
 
                     <TextView
                         android:id="@+id/result_page"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end|center_vertical"
-                        android:paddingBottom="@dimen/result_view_vertical_padding"
-                        android:paddingLeft="@dimen/result_view_horizontal_padding"
-                        android:paddingRight="@dimen/result_view_horizontal_padding"
-                        android:paddingTop="@dimen/result_view_vertical_padding"
-                        android:textSize="@dimen/result_text_size"
-                        android:textStyle="italic" />
+                        style="@style/resultTextView"
+                        android:gravity="end|center_vertical" />
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
@@ -65,25 +49,15 @@
 
                     <TextView
                         android:id="@+id/list_bottom_left"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="start|center_vertical"
-                        android:paddingBottom="@dimen/list_bottom_view_vertical_padding"
-                        android:paddingLeft="@dimen/list_bottom_view_horizontal_padding"
-                        android:paddingRight="@dimen/list_bottom_view_horizontal_padding"
-                        android:textSize="@dimen/list_bottom_text_size" />
+                        style="@style/resultTextView"
+                        android:layout_marginBottom="@dimen/result_view_vertical_padding"
+                        android:gravity="start|center_vertical" />
 
                     <TextView
                         android:id="@+id/list_bottom_right"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="end|center_vertical"
-                        android:paddingBottom="@dimen/list_bottom_view_vertical_padding"
-                        android:paddingLeft="@dimen/list_bottom_view_horizontal_padding"
-                        android:paddingRight="@dimen/list_bottom_view_horizontal_padding"
-                        android:textSize="@dimen/list_bottom_text_size" />
+                        style="@style/resultTextView"
+                        android:layout_marginBottom="@dimen/result_view_vertical_padding"
+                        android:gravity="end|center_vertical" />
                 </LinearLayout>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
