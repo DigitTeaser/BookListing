@@ -4,7 +4,7 @@
     <!-- Search string. [CHAR LIMIT=NONE] -->
     <string name="search_title">Search</string>
     <string name="search_hint">Search books.</string>
-    <string name="search_text">Touch here to begin search books.</string>
+    <string name="search_text">Touch here to begin searching books.</string>
 
     <!-- Image description. [CHAR LIMIT=NONE] -->
     <string name="book_image_description">This is an image about the book.</string>
@@ -26,7 +26,7 @@
     <string name="list_bottom_right">Swipe left to open next page.</string>
 
     <!-- Text to display in the list when there are no result. [CHAR LIMIT=NONE] -->
-    <string name="no_book">No book found.\nPlease search for other keywords.</string>
+    <string name="no_book">No books found.\nPlease search for other keywords.</string>
     <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
-    <string name="no_internet_connection">No internet connection.</string>
+    <string name="no_internet_connection">No Internet connection.</string>
 </resources>
