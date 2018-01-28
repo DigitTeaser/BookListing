@@ -31,6 +31,10 @@ The app use `SwipeRefreshLayout` as the loading indicator, and when there are co
 
 When the device is not connected to Internet or no result found from the API, the app will display the right empty state view to users.
 
+<img src="no_connection_toast.png" width="300px">
+
+If there are contents at screen, users pull to refresh or search again when the device is disconnected, the app will make a `Toast` to inform users that the current situation.
+
 The app supports two languages: English, Simplified Chinese.
 
 This is a training project in Udacity's Android Basics Nanodegree program.  
